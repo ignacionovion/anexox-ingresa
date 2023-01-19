@@ -1,0 +1,225 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Transferencias</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-9722A627
+</script>
+<link rel="stylesheet" type="text/css" href="../../css/estilos.css">
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="../ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-24340E9C
+
+var VST_PI_TRANSFERENCIAS1_DatePicker_s_FECHA1 = new Object(); 
+VST_PI_TRANSFERENCIAS1_DatePicker_s_FECHA1.format           = "dd/mm/yyyy";
+VST_PI_TRANSFERENCIAS1_DatePicker_s_FECHA1.style            = "Styles/None/Style.css";
+VST_PI_TRANSFERENCIAS1_DatePicker_s_FECHA1.relativePathPart = "../";
+VST_PI_TRANSFERENCIAS1_DatePicker_s_FECHA1.themeVersion = "3.0";
+
+var VST_PI_TRANSFERENCIAS1_DatePicker_s_FECHA_D1 = new Object(); 
+VST_PI_TRANSFERENCIAS1_DatePicker_s_FECHA_D1.format           = "dd/mm/yyyy";
+VST_PI_TRANSFERENCIAS1_DatePicker_s_FECHA_D1.style            = "Styles/None/Style.css";
+VST_PI_TRANSFERENCIAS1_DatePicker_s_FECHA_D1.relativePathPart = "../";
+VST_PI_TRANSFERENCIAS1_DatePicker_s_FECHA_D1.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<h2>Sistema de Pago a IES - Transferencias</h2>
+<!-- BEGIN Record VST_PI_TRANSFERENCIAS1 -->&nbsp; 
+<form id="VST_PI_TRANSFERENCIAS1" method="post" name="{HTMLFormName}" action="{Action}">
+  <table class="grilla" {buscador}>
+    <!-- BEGIN Error -->
+    <tr>
+      <td colspan="2"><font color="#ff0000">{Error}</font></td> 
+    </tr>
+ <!-- END Error -->
+    <tr {buscadories}>
+      <td>Nombre IES:</td> 
+      <td>
+        <select style="WIDTH: 315px" id="VST_PI_TRANSFERENCIAS1s_IES" name="{s_IES_Name}">
+          <option selected value="">{res:CCS_SelectValue}</option>
+ {s_IES_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="VST_PI_TRANSFERENCIAS1s_NOMBRE_BANCO">Nombre Banco:&nbsp; </label></td> 
+      <td>
+        <select style="WIDTH: 315px" id="VST_PI_TRANSFERENCIAS1s_BANCN_COD" name="{s_BANCN_COD_Name}">
+          <option selected value="">{res:CCS_SelectValue}</option>
+ {s_BANCN_COD_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr>
+      <td>Estado:</td> 
+      <td>
+        <select id="VST_PI_TRANSFERENCIAS1s_ESTADO_COD" name="{s_ESTADO_COD_Name}">
+          <option selected value="">{res:CCS_SelectValue}</option>
+ {s_ESTADO_COD_Options} 
+        </select>
+ </td> 
+    </tr>
+	
+	<tr>
+      <td>Estado Comprobante:</td> 
+      <td>
+        <select id="VST_PI_TRANSFERENCIAS1s_ESTADO_COMP" name="{s_ESTADO_COMP_Name}">
+          <option selected value="">{res:CCS_SelectValue}</option>
+ {s_ESTADO_COMP_Options} 
+        </select>
+ </td> 
+    </tr>
+ 
+    <tr>
+      <td>Fecha Carga Desde:</td> 
+      <td><input id="VST_PI_TRANSFERENCIAS1s_FECHA_D" value="{s_FECHA_D}" maxlength="100" size="8" name="{s_FECHA_D_Name}">&nbsp; 
+        <!-- BEGIN DatePicker DatePicker_s_FECHA_D1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="VST_PI_TRANSFERENCIAS1DatePicker_s_FECHA_D1"><img id="VST_PI_TRANSFERENCIAS1DatePicker_s_FECHA_D1_Image" border="0" alt="Show Date Picker" src="../Styles/None/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_FECHA_D1 --></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="VST_PI_TRANSFERENCIAS1s_FECHA">Fecha Carga Hasta:</label></td> 
+      <td><input id="VST_PI_TRANSFERENCIAS1s_FECHA" value="{s_FECHA}" maxlength="100" size="8" name="{s_FECHA_Name}">&nbsp; 
+        <!-- BEGIN DatePicker DatePicker_s_FECHA1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="VST_PI_TRANSFERENCIAS1DatePicker_s_FECHA1"><img id="VST_PI_TRANSFERENCIAS1DatePicker_s_FECHA1_Image" border="0" alt="Show Date Picker" src="../Styles/None/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_FECHA1 --></td> 
+      <tr>
+        <td colspan="2" align="right">
+          <!-- BEGIN Button Button_DoSearch --><input id="VST_PI_TRANSFERENCIAS1Button_DoSearch" value="Buscar" alt="{res:CCS_Search}" type="submit" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+      </tr>
+ 
+    </table>
+ 
+  </form>
+ <!-- END Record VST_PI_TRANSFERENCIAS1 --><br>
+  <!-- BEGIN Grid VST_PI_TRANSFERENCIAS -->
+  <table class="grilla">
+    <tr>
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_TRANSFERENCIA_COD -->ID 
+      <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="VST_PI_TRANSFERENCIASSorter_TRANSFERENCIA_COD"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+      <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="VST_PI_TRANSFERENCIASSorter_TRANSFERENCIA_COD"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_TRANSFERENCIA_COD --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_IEST_NOMBRE_IES -->IES 
+      <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="VST_PI_TRANSFERENCIASSorter_IEST_NOMBRE_IES"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+      <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="VST_PI_TRANSFERENCIASSorter_IEST_NOMBRE_IES"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_IEST_NOMBRE_IES --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_NOMBRE_BANCO -->Banco 
+      <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="VST_PI_TRANSFERENCIASSorter_NOMBRE_BANCO"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+      <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="VST_PI_TRANSFERENCIASSorter_NOMBRE_BANCO"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_NOMBRE_BANCO --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_FECHA -->Fecha Carga Nomina
+      <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="VST_PI_TRANSFERENCIASSorter_FECHA"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+      <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="VST_PI_TRANSFERENCIASSorter_FECHA"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_FECHA --></th>
+ 
+	  <th scope="col">
+      <!-- BEGIN Sorter Sorter_TIPO_DESC -->Tipo Pago 
+      <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="VST_PI_TRANSFERENCIASSorter_TIPO_DESC"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+      <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="VST_PI_TRANSFERENCIASSorter_TIPO_DESC"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_TIPO_DESC --></th>
+ 
+       <th scope="col">
+      <!-- BEGIN Sorter Sorter_FECHA_COMP -->Fecha Carga Comprobante
+      <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="VST_PI_TRANSFERENCIASSorter_FECHA_COMP"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+      <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="VST_PI_TRANSFERENCIASSorter_FECHA_COMP"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_FECHA_COMP --></th>
+ 
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_N_REG -->N° Reg 
+      <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="VST_PI_TRANSFERENCIASSorter_N_REG"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+      <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="VST_PI_TRANSFERENCIASSorter_N_REG"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_N_REG --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_MONTO_TOTAL -->Monto Total 
+      <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="VST_PI_TRANSFERENCIASSorter_MONTO_TOTAL"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+      <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="VST_PI_TRANSFERENCIASSorter_MONTO_TOTAL"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_MONTO_TOTAL --></th>
+ 
+      <th scope="col">
+      <!-- BEGIN Sorter Sorter_ESTADO_DESC -->Estado 
+      <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+      <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="VST_PI_TRANSFERENCIASSorter_ESTADO_DESC"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+      <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+      <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="VST_PI_TRANSFERENCIASSorter_ESTADO_DESC"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_ESTADO_DESC --></th>
+ 
+      <th scope="col">&nbsp;Acciones</th>
+ 
+    </tr>
+ 
+    <!-- BEGIN Row -->
+    <tr>
+      <td style="TEXT-ALIGN: right">{TRANSFERENCIA_COD}&nbsp;</td> 
+      <td>{IEST_NOMBRE_IES}&nbsp;</td> 
+      <td>{NOMBRE_BANCO}&nbsp;</td> 
+      <td>{FECHA}&nbsp;</td> 
+	  <td>{TIPO_DESC}&nbsp;</td>
+	  <td>{FECHA_COMP}&nbsp;</td> 
+      <td style="TEXT-ALIGN: right">{N_REG}<input id="VST_PI_TRANSFERENCIASh_comentario" type="hidden" value="{h_comentario}" name="{h_comentario_Name}">&nbsp</td> 
+      <td style="TEXT-ALIGN: right">{MONTO_TOTAL}<input id="VST_PI_TRANSFERENCIASh_comprobante" type="hidden" value="{h_comprobante}" name="{h_comprobante_Name}">&nbsp;</td> 
+      <td>{h_comen}{ESTADO_DESC}{h_comen1}{ESTADO_DESCEL}{h_comen2}&nbsp;<input id="VST_PI_TRANSFERENCIASh_estado_cod" type="hidden" value="{h_estado_cod}" name="{h_estado_cod_Name}"></td> 
+      <td>{h_nomina}{h_comp} 
+        <!-- BEGIN Link Link1 --><a href="{Link1_Src}" id="VST_PI_TRANSFERENCIASLink1_{VST_PI_TRANSFERENCIAS:rowNumber}" {link_estado1}>Enviar</a><!-- END Link Link1 -->&nbsp;<a href="{Link2_Src}" id="VST_PI_TRANSFERENCIASLink2_{VST_PI_TRANSFERENCIAS:rowNumber}" {revision}>Revisar</a>&nbsp;<a href="{Link3_Src}" id="VST_PI_TRANSFERENCIASLink3_{VST_PI_TRANSFERENCIAS:rowNumber}" {revision1}>Eliminar</a></td> 
+    </tr>
+ <!-- END Row -->
+    <!-- BEGIN NoRecords -->
+    <tr>
+      <td colspan="8">No hay registros.</td> 
+    </tr>
+ <!-- END NoRecords -->
+    <tr>
+      <td colspan="8">
+        <!-- BEGIN Navigator Navigator -->
+        <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+        <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+          <option selected value="">-</option>
+ {PageSize_Options} 
+        </select>
+ 
+        <!-- BEGIN First_On --><a href="{First_URL}">|&lt;</a> <!-- END First_On -->
+        <!-- BEGIN First_Off -->|&lt; <!-- END First_Off -->
+        <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt;</a> <!-- END Prev_On -->
+        <!-- BEGIN Prev_Off -->&lt;&lt; <!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+        <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt;</a> <!-- END Next_On -->
+        <!-- BEGIN Next_Off -->&gt;&gt; <!-- END Next_Off -->
+        <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;|</a> <!-- END Last_On -->
+        <!-- BEGIN Last_Off -->&gt;| <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+    </tr>
+ 
+  </table>
+ <!-- END Grid VST_PI_TRANSFERENCIAS --><br>
+  </body>
+ 
+  </html>

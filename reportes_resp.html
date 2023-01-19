@@ -1,0 +1,311 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>reportes</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-86BEACD2
+</script>
+<link rel="stylesheet" type="text/css" href="../../css/estilos.css">
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="../ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-DA294B07
+
+var VST_PI_REPORTESSearch_DatePicker_s_FECHA = new Object(); 
+VST_PI_REPORTESSearch_DatePicker_s_FECHA.format           = "dd/mm/yyyy";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA.style            = "Styles/None/Style.css";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA.relativePathPart = "../";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA.themeVersion = "3.0";
+
+var VST_PI_REPORTESSearch_DatePicker_s_FECHA_d1 = new Object(); 
+VST_PI_REPORTESSearch_DatePicker_s_FECHA_d1.format           = "dd/mm/yyyy";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA_d1.style            = "Styles/None/Style.css";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA_d1.relativePathPart = "../";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA_d1.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+</head>
+<body>
+<!-- BEGIN Record VST_PI_REPORTESSearch -->
+<form id="VST_PI_REPORTESSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Reportes con Filtros</h2>
+  <table>
+    <!-- BEGIN Error -->
+    <tr>
+      <td colspan="5"><font color="#ff0000">{Error}</font></td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td><label for="VST_PI_REPORTESSearchs_RUT">RUT:</label></td> 
+            <td colspan="3"><input id="VST_PI_REPORTESSearchs_RUT" maxlength="12" size="12" value="{s_RUT}" name="{s_RUT_Name}"></td>
+          </tr>
+ 
+          <tr>
+            <td><label for="VST_PI_REPORTESSearchs_LICITACION">Año Licitación:</label></td> 
+            <td><input id="VST_PI_REPORTESSearchs_LICITACION" maxlength="12" size="12" value="{s_LICITACION}" name="{s_LICITACION_Name}"></td> 
+            <td>Año&nbsp;Operación:&nbsp;</td> 
+            <td><input id="VST_PI_REPORTESSearchs_OPERACION" maxlength="12" size="12" value="{s_OPERACION}" name="{s_OPERACION_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr>
+            <td><label for="VST_PI_REPORTESSearchs_IESN_RUT">IES:</label></td> 
+            <td colspan="3">
+              <select id="VST_PI_REPORTESSearchs_IESN_RUT" style="WIDTH: 315px" name="{s_IESN_RUT_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {s_IESN_RUT_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr>
+            <td><label for="VST_PI_REPORTESSearchs_RUTBCO">Banco:</label></td> 
+            <td colspan="3">
+              <select id="VST_PI_REPORTESSearchs_RUTBCO" style="WIDTH: 315px" name="{s_RUTBCO_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {s_RUTBCO_Options}
+              </select>
+ </td>
+          </tr>
+        </table>
+      </td> 
+      <td>
+        <table>
+          <tr>
+            <td>Estado de Pago:</td> 
+            <td>
+              <!-- BEGIN CheckBoxList s_PAGO_TOTAL --><input id="VST_PI_REPORTESSearchs_PAGO_TOTAL_{s_PAGO_TOTAL:optionNumber}" type="checkbox" value="{Value}" name="{s_PAGO_TOTAL_Name}" {Check}><label for="VST_PI_REPORTESSearchs_PAGO_TOTAL_{s_PAGO_TOTAL:optionNumber}">{Description}</label><!-- END CheckBoxList s_PAGO_TOTAL --></td>
+          </tr>
+ 
+          <tr>
+            <td colspan="2"><label for="VST_PI_REPORTESSearchs_FECHA_h">Fecha de Transferencia:</label></td>
+          </tr>
+ 
+          <tr>
+            <td>&nbsp;Desde:</td> 
+            <td>&nbsp;Hasta:</td>
+          </tr>
+ 
+          <tr>
+            <td><label for="VST_PI_REPORTESSearchs_FECHA_h">&nbsp;</label><input id="VST_PI_REPORTESSearchs_FECHA_h_d" maxlength="100" size="8" value="{s_FECHA_d}" name="{s_FECHA_d_Name}">
+              <!-- BEGIN DatePicker DatePicker_s_FECHA_d1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="VST_PI_REPORTESSearchDatePicker_s_FECHA_d1"><img id="VST_PI_REPORTESSearchDatePicker_s_FECHA_d1_Image" border="0" alt="Show Date Picker" src="../Styles/None/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_FECHA_d1 --></td> 
+            <td><input id="VST_PI_REPORTESSearchs_FECHA_h" maxlength="100" size="8" value="{s_FECHA_h}" name="{s_FECHA_h_Name}">
+              <!-- BEGIN DatePicker DatePicker_s_FECHA --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="VST_PI_REPORTESSearchDatePicker_s_FECHA"><img id="VST_PI_REPORTESSearchDatePicker_s_FECHA_Image" border="0" alt="Show Date Picker" src="../Styles/None/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_FECHA --></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+ 
+    <tr>
+      <td colspan="2" align="right">
+        <!-- BEGIN Button Button_DoSearch --><input id="VST_PI_REPORTESSearchButton_DoSearch" alt="{res:CCS_Search}" type="submit" value="Generar Reporte" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record VST_PI_REPORTESSearch --><br>
+<!-- BEGIN Grid VST_PI_REPORTES -->
+<h2>{res:CCS_GridFormPrefix} {res:VST_PI_REPORTES} {res:CCS_GridFormSuffix}</h2>
+<table>
+  <tr>
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_CARGA_COD --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_CARGA_COD">{res:CARGA_COD}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_CARGA_COD --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_TRANSFERENCIA_COD --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_TRANSFERENCIA_COD">{res:TRANSFERENCIA_COD}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_TRANSFERENCIA_COD --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_RUT --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_RUT">{res:RUT}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_RUT --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_RUTBCO --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_RUTBCO">{res:RUTBCO}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_RUTBCO --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_IEST_NOMBRE_IES --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_IEST_NOMBRE_IES">{res:IEST_NOMBRE_IES}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_IEST_NOMBRE_IES --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_IESN_RUT --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_IESN_RUT">{res:IESN_RUT}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_IESN_RUT --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_NOMBRE_BANCO --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_NOMBRE_BANCO">{res:NOMBRE_BANCO}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_NOMBRE_BANCO --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_BANCN_COD --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_BANCN_COD">{res:BANCN_COD}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_BANCN_COD --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_OPERACION --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_OPERACION">{res:OPERACION}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_OPERACION --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_LICITACION --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_LICITACION">{res:LICITACION}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_LICITACION --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_MONTOCREDITO --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_MONTOCREDITO">{res:MONTOCREDITO}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_MONTOCREDITO --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_FECHA --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_FECHA">{res:FECHA}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_FECHA --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_ESTADO_DESC --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_ESTADO_DESC">{res:ESTADO_DESC}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ESTADO_DESC --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_ARANCELSOLICITADO --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_ARANCELSOLICITADO">{res:ARANCELSOLICITADO}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_ARANCELSOLICITADO --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_CREDITOUF --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_CREDITOUF">{res:CREDITOUF}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_CREDITOUF --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_MONTOSEGUROIES --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_MONTOSEGUROIES">{res:MONTOSEGUROIES}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_MONTOSEGUROIES --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_MONTOAPAGAR --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_MONTOAPAGAR">{res:MONTOAPAGAR}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_MONTOAPAGAR --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_MONTOOTRACTA --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_MONTOOTRACTA">{res:MONTOOTRACTA}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_MONTOOTRACTA --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_PLAZO --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_PLAZO">{res:PLAZO}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_PLAZO --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_TASA --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_TASA">{res:TASA}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_TASA --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_FECHACURSE --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_FECHACURSE">{res:FECHACURSE}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_FECHACURSE --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_RUTIES --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_RUTIES">{res:RUTIES}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_RUTIES --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_PAGO_FINAL --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_PAGO_FINAL">{res:PAGO_FINAL}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_PAGO_FINAL --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_MONTO_CREDITO --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_MONTO_CREDITO">{res:MONTO_CREDITO}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_MONTO_CREDITO --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_PAGO_TOTAL --><a href="{Sort_URL}" id="VST_PI_REPORTESSorter_PAGO_TOTAL">{res:PAGO_TOTAL}</a> 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On --><!-- END Sorter Sorter_PAGO_TOTAL --></th>
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr>
+    <td style="TEXT-ALIGN: right">{CARGA_COD}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{TRANSFERENCIA_COD}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{RUT}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{RUTBCO}&nbsp;</td> 
+    <td>{IEST_NOMBRE_IES}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{IESN_RUT}&nbsp;</td> 
+    <td>{NOMBRE_BANCO}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{BANCN_COD}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{OPERACION}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{LICITACION}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{MONTOCREDITO}&nbsp;</td> 
+    <td>{FECHA}&nbsp;</td> 
+    <td>{ESTADO_DESC}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{ARANCELSOLICITADO}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{CREDITOUF}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{MONTOSEGUROIES}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{MONTOAPAGAR}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{MONTOOTRACTA}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{PLAZO}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{TASA}&nbsp;</td> 
+    <td>{FECHACURSE}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{RUTIES}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{PAGO_FINAL}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{MONTO_CREDITO}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{PAGO_TOTAL}&nbsp;</td>
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr>
+    <td colspan="25">{res:CCS_NoRecords}</td>
+  </tr>
+  <!-- END NoRecords -->
+  <tr>
+    <td colspan="25">
+      <!-- BEGIN Navigator Navigator -->
+      <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+      <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+        <option selected value="">-</option>
+ {PageSize_Options}
+      </select>
+ 
+      <!-- BEGIN First_On --><a href="{First_URL}">{res:CCS_First}</a> <!-- END First_On -->
+      <!-- BEGIN First_Off -->{res:CCS_First} <!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}">{res:CCS_Previous}</a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off -->{res:CCS_Previous} <!-- END Prev_Off -->&nbsp; 
+      <!-- BEGIN Pages -->
+      <!-- BEGIN Page_On --><a href="{Page_URL}">{Page_Number}</a>&nbsp;<!-- END Page_On -->
+      <!-- BEGIN Page_Off -->{Page_Number}&nbsp;<!-- END Page_Off --><!-- END Pages -->{res:CCS_Of} &nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}">{res:CCS_Next}</a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off -->{res:CCS_Next} <!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}">{res:CCS_Last}</a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off -->{res:CCS_Last} <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td>
+  </tr>
+</table>
+<!-- END Grid VST_PI_REPORTES --><br>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>datos_cc_record</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+<link rel="stylesheet" type="text/css" href="../../css/estilos.css">
+</head>
+<body>
+<!-- BEGIN Record PI_DATOS_CC -->
+<form id="PI_DATOS_CC" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Información de Transferencia para IES (Cuenta Corriente)</h2>
+  <table class="grilla">
+    <!-- BEGIN Error -->
+    <tr>
+      <td colspan="2">{Error}</td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td><label for="PI_DATOS_CCRUTIES">Rut IES:</label></td> 
+      <td><input id="PI_DATOS_CCRUTIES" maxlength="20" value="{RUTIES}" name="{RUTIES_Name}" size="20" {ies}></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="PI_DATOS_CCNOMBRE_IES">Nombre IES:</label></td> 
+      <td><input id="PI_DATOS_CCNOMBRE_IES" maxlength="100" size="50" value="{NOMBRE_IES}" name="{NOMBRE_IES_Name}" {ies}></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="PI_DATOS_CCBANCO_CC">Banco CC:</label></td> 
+      <td><input id="PI_DATOS_CCBANCO_CC" maxlength="50" size="50" value="{BANCO_CC}" name="{BANCO_CC_Name}" {ies}></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="PI_DATOS_CCN_CUENTA">N° Cuenta</label></td> 
+      <td><input id="PI_DATOS_CCN_CUENTA" maxlength="20" value="{N_CUENTA}" name="{N_CUENTA_Name}" size="20" {ies}></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="PI_DATOS_CCCONTRAPARTE">Contraparte</label></td> 
+      <td><input id="PI_DATOS_CCCONTRAPARTE" maxlength="100" size="50" value="{CONTRAPARTE}" name="{CONTRAPARTE_Name}" {ies}></td>
+    </tr>
+ 
+    <tr>
+      <td><label for="PI_DATOS_CCEMAIL">E-Mail</label></td> 
+      <td><input id="PI_DATOS_CCEMAIL" maxlength="100" size="50" value="{EMAIL}" name="{EMAIL_Name}" {ies}></td>
+    </tr>
+ 
+    <tr>
+      <td colspan="2" align="right"><input id="PI_DATOS_CCh_datos_cc_cod" type="hidden" value="{h_datos_cc_cod}" name="{h_datos_cc_cod_Name}">
+        <!-- BEGIN Button Button_Insert --><input id="PI_DATOS_CCButton_Insert" alt="{res:CCS_Insert}" type="submit" value="Agregar" name="{Button_Name}" {boton}><!-- END Button Button_Insert -->
+        <!-- BEGIN Button Button_Update --><input id="PI_DATOS_CCButton_Update" alt="{res:CCS_Update}" type="submit" value="Actualizar" name="{Button_Name}" {boton}><!-- END Button Button_Update --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record PI_DATOS_CC --><br>
+</body>
+</html>

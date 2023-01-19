@@ -1,0 +1,151 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>reportes</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-86BEACD2
+</script>
+
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" src="../ClientI18N.php?file=DatePicker.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//Date Picker Object Definitions @1-DA294B07
+
+var VST_PI_REPORTESSearch_DatePicker_s_FECHA = new Object(); 
+VST_PI_REPORTESSearch_DatePicker_s_FECHA.format           = "dd/mm/yyyy";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA.style            = "Styles/None/Style.css";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA.relativePathPart = "../";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA.themeVersion = "3.0";
+
+var VST_PI_REPORTESSearch_DatePicker_s_FECHA_d1 = new Object(); 
+VST_PI_REPORTESSearch_DatePicker_s_FECHA_d1.format           = "dd/mm/yyyy";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA_d1.style            = "Styles/None/Style.css";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA_d1.relativePathPart = "../";
+VST_PI_REPORTESSearch_DatePicker_s_FECHA_d1.themeVersion = "3.0";
+
+//End Date Picker Object Definitions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+
+</head>
+<body>
+<!-- BEGIN Record VST_PI_REPORTESSearch -->
+<form id="VST_PI_REPORTESSearch" enctype="{HTMLFormEnctype}" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Reportes con Filtros</h2>
+  <table>
+    <!-- BEGIN Error -->
+    <tr>
+      <td colspan="5"><font color="#ff0000">{Error}</font></td>
+    </tr>
+    <!-- END Error -->
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td><label for="VST_PI_REPORTESSearchs_RUT">RUT:</label></td> 
+            <td colspan="3"><input id="VST_PI_REPORTESSearchs_RUT" maxlength="12" size="12" value="{s_RUT}" name="{s_RUT_Name}"></td>
+          </tr>
+ 
+          <tr>
+            <td><label for="VST_PI_REPORTESSearchs_LICITACION">Año Licitación:</label></td> 
+            <td><input id="VST_PI_REPORTESSearchs_LICITACION" maxlength="12" size="12" value="{s_LICITACION}" name="{s_LICITACION_Name}"></td> 
+            <td>Año&nbsp;Operación:&nbsp;</td> 
+            <td><input id="VST_PI_REPORTESSearchs_OPERACION" maxlength="12" size="12" value="{s_OPERACION}" name="{s_OPERACION_Name}">&nbsp;</td>
+          </tr>
+ 
+          <tr {h_ies}>
+            <td><label for="VST_PI_REPORTESSearchs_IESN_RUT">IES:</label></td> 
+            <td colspan="3">
+              <select id="VST_PI_REPORTESSearchs_IESN_RUT" style="WIDTH: 315px" name="{s_IESN_RUT_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {s_IESN_RUT_Options}
+              </select>
+ </td>
+          </tr>
+ 
+          <tr {h_banco}>
+            <td><label for="VST_PI_REPORTESSearchs_RUTBCO">Banco:</label></td> 
+            <td colspan="3">
+              <select id="VST_PI_REPORTESSearchs_RUTBCO" style="WIDTH: 315px" name="{s_RUTBCO_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+                {s_RUTBCO_Options}
+              </select>
+ </td>
+          </tr>
+        </table>
+ 
+        <p>&nbsp;</p>
+ 
+        <p>
+ <table style="BORDER-TOP: #66ccff 1px solid; BORDER-RIGHT: #66ccff 1px solid; BORDER-BOTTOM: #66ccff 1px solid; BORDER-LEFT: #66ccff 1px solid" width="100%">
+ <tr>
+ <td>
+ Tipo de Pago :
+ </td>    
+ <td>   
+<!-- BEGIN RadioButton s_TIPO_RADIO --><input {Check} type="radio" name="{s_TIPO_RADIO_Name}" value="{Value}" id="VST_PI_REPORTESSearchs_TIPO_RADIO_{s_TIPO_RADIO:optionNumber}"><label for="VST_PI_REPORTESSearchs_TIPO_RADIO_{s_TIPO_RADIO:optionNumber}">{Description}</label><!-- END RadioButton s_TIPO_RADIO --></p>
+</td></tr></table>
+      </td> 
+      <td valign="top" >
+	  <div {esp}>
+        <table  style="BORDER-TOP: #66ccff 1px solid; BORDER-RIGHT: #66ccff 1px solid; BORDER-BOTTOM: #66ccff 1px solid; BORDER-LEFT: #66ccff 1px solid" width="100%">
+          <tr>
+            <td>Estado Transferencia:</td> 
+            <td>
+              <!-- BEGIN CheckBoxList s_ESTADO --><input id="VST_PI_REPORTESSearchs_ESTADO_{s_ESTADO:optionNumber}" type="checkbox" value="{Value}" name="{s_ESTADO_Name}" {Check}><label for="VST_PI_REPORTESSearchs_ESTADO_{s_ESTADO:optionNumber}">{Description}</label><!-- END CheckBoxList s_ESTADO --></td>
+          </tr>
+        </table>
+        <br>
+        <table  style="BORDER-TOP: #66ccff 1px solid; BORDER-RIGHT: #66ccff 1px solid; BORDER-BOTTOM: #66ccff 1px solid; BORDER-LEFT: #66ccff 1px solid" width="100%">
+          <tr>
+            <td>Estado de Pago:</td> 
+            <td>
+              <!-- BEGIN CheckBoxList s_PAGO_TOTAL --><input id="VST_PI_REPORTESSearchs_PAGO_TOTAL_{s_PAGO_TOTAL:optionNumber}" type="checkbox" value="{Value}" name="{s_PAGO_TOTAL_Name}" {Check}><label for="VST_PI_REPORTESSearchs_PAGO_TOTAL_{s_PAGO_TOTAL:optionNumber}">{Description}</label><!-- END CheckBoxList s_PAGO_TOTAL --></td>
+          </tr>
+        </table>
+        <br>
+		</div>
+        <table style="BORDER-TOP: #66ccff 1px solid; BORDER-RIGHT: #66ccff 1px solid; BORDER-BOTTOM: #66ccff 1px solid; BORDER-LEFT: #66ccff 1px solid" width="100%">
+          <tr>
+            <td colspan="2"><label for="VST_PI_REPORTESSearchs_FECHA_h">Fecha de Transferencia:</label></td>
+          </tr>
+ 
+          <tr>
+            <td>&nbsp;Desde:</td> 
+            <td>&nbsp;Hasta:</td>
+          </tr>
+ 
+          <tr>
+            <td><label for="VST_PI_REPORTESSearchs_FECHA_h">&nbsp;</label><input id="VST_PI_REPORTESSearchs_FECHA_h_d" maxlength="100" size="8" value="{s_FECHA_d}" name="{s_FECHA_d_Name}">
+              <!-- BEGIN DatePicker DatePicker_s_FECHA_d1 --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="VST_PI_REPORTESSearchDatePicker_s_FECHA_d1"><img id="VST_PI_REPORTESSearchDatePicker_s_FECHA_d1_Image" border="0" alt="Show Date Picker" src="../Styles/None/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_FECHA_d1 --></td> 
+            <td><input id="VST_PI_REPORTESSearchs_FECHA_h" maxlength="100" size="8" value="{s_FECHA_h}" name="{s_FECHA_h_Name}">
+              <!-- BEGIN DatePicker DatePicker_s_FECHA --><a href="javascript:showDatePicker('{Name}','{FormName}','{DateControl}');" id="VST_PI_REPORTESSearchDatePicker_s_FECHA"><img id="VST_PI_REPORTESSearchDatePicker_s_FECHA_Image" border="0" alt="Show Date Picker" src="../Styles/None/Images/DatePicker.gif"></a><!-- END DatePicker DatePicker_s_FECHA --></td>
+          </tr>
+        </table>
+        <input id="VST_PI_REPORTESSearchs_TIPO" type="hidden" value="{s_TIPO}" name="{s_TIPO_Name}"></td>
+    </tr>
+ 
+    <tr>
+      <td colspan="2" align="right">
+        <!-- BEGIN Button Button_DoSearch --><input id="VST_PI_REPORTESSearchButton_DoSearch" alt="{res:CCS_Search}" type="submit" target="_blank" value="Generar Reporte" name="{Button_Name}"><!-- END Button Button_DoSearch --></td>
+    </tr>
+  </table>
+</form>
+<!-- END Record VST_PI_REPORTESSearch --><br>
+<br>
+<br>
+</body>
+</html>

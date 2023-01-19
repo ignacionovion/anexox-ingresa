@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>datos_cc</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+<script language="JavaScript" type="text/javascript">
+//Begin CCS script
+//Include Common JSFunctions @1-9722A627
+</script>
+<script language="JavaScript" src="../ClientI18N.php?file=Functions.js&amp;locale={res:CCS_LocaleID}" type="text/javascript" charset="utf-8"></script>
+<script language="JavaScript" type="text/javascript">
+//End Include Common JSFunctions
+
+//bind_events @1-BF0EB765
+function bind_events() {
+}
+//End bind_events
+
+window.onload = bind_events; //Assign bind_events @1-19F7B649
+
+//End CCS script
+</script>
+<link rel="stylesheet" type="text/css" href="../../css/estilos.css">
+</head>
+<body>
+<!-- BEGIN Record PI_DATOS_CCSearch -->
+<form id="PI_DATOS_CCSearch" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Información de Transferencia para IES (Cuenta Corriente)</h2>
+ 
+  <table class="grilla">
+    <!-- BEGIN Error -->
+    <tr>
+      <td colspan="2">{Error}</td> 
+    </tr>
+ <!-- END Error -->
+    <tr>
+      <td><label for="PI_DATOS_CCSearchs_RUTIES">Rut IES :</label></td> 
+      <td><input id="PI_DATOS_CCSearchs_RUTIES" maxlength="20" value="{s_RUTIES}" name="{s_RUTIES_Name}" size="20"></td> 
+    </tr>
+ 
+    <tr>
+      <td><label for="PI_DATOS_CCSearchs_NOMBRE_IES">Nombre IES :</label></td> 
+      <td><input id="PI_DATOS_CCSearchs_NOMBRE_IES" maxlength="100" size="50" value="{s_NOMBRE_IES}" name="{s_NOMBRE_IES_Name}"></td> 
+    </tr>
+ 
+    <tr>
+      <td colspan="2" align="right">
+        <!-- BEGIN Button Button_DoSearch --><input id="PI_DATOS_CCSearchButton_DoSearch" alt="{res:CCS_Search}" type="submit" value="Buscar" name="{Button_Name}"><!-- END Button Button_DoSearch --></td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record PI_DATOS_CCSearch --><br>
+<!-- BEGIN Grid PI_DATOS_CC --><a {bnc} {consulta} href="{Link1_Src}" id="PI_DATOS_CCLink1_{PI_DATOS_CC:rowNumber}">Nuevo Registro</a> 
+<table class="grilla">
+  <tr>
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_RUTIES -->RUT IES 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="PI_DATOS_CCSorter_RUTIES"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="PI_DATOS_CCSorter_RUTIES"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_RUTIES --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_NOMBRE_IES -->Nombre IES 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="PI_DATOS_CCSorter_NOMBRE_IES"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="PI_DATOS_CCSorter_NOMBRE_IES"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_NOMBRE_IES --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_BANCO_CC -->Banco CC 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="PI_DATOS_CCSorter_BANCO_CC"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="PI_DATOS_CCSorter_BANCO_CC"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_BANCO_CC --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_N_CUENTA -->N° Cuenta 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="PI_DATOS_CCSorter_N_CUENTA"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="PI_DATOS_CCSorter_N_CUENTA"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_N_CUENTA --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_CONTRAPARTE -->Contraparte 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="PI_DATOS_CCSorter_CONTRAPARTE"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="PI_DATOS_CCSorter_CONTRAPARTE"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_CONTRAPARTE --></th>
+ 
+    <th scope="col">
+    <!-- BEGIN Sorter Sorter_EMAIL -->E-Mail 
+    <!-- BEGIN Asc_On --><img border="0" alt="{res:CCS_ASC}" src="../Styles/None/Images/Asc.gif"><!-- END Asc_On -->
+    <!-- BEGIN Asc_Off --><a href="{Asc_URL}" id="PI_DATOS_CCSorter_EMAIL"><img border="0" alt="{Asc_URL}" src="../Styles/None/Images/AscOff.gif"></a><!-- END Asc_Off -->
+    <!-- BEGIN Desc_On --><img border="0" alt="{res:CCS_DESC}" src="../Styles/None/Images/Desc.gif"><!-- END Desc_On -->
+    <!-- BEGIN Desc_Off --><a href="{Desc_URL}" id="PI_DATOS_CCSorter_EMAIL"><img border="0" alt="{Desc_URL}" src="../Styles/None/Images/DescOff.gif"></a><!-- END Desc_Off --><!-- END Sorter Sorter_EMAIL --></th>
+ 
+    <th scope="col" {consulta} {bnc}>Acciones&nbsp;</th>
+ 
+  </tr>
+ 
+  <!-- BEGIN Row -->
+  <tr>
+    <td style="TEXT-ALIGN: right">{RUTIES}&nbsp;</td> 
+    <td>{NOMBRE_IES}&nbsp;</td> 
+    <td>{BANCO_CC}&nbsp;</td> 
+    <td style="TEXT-ALIGN: right">{N_CUENTA}&nbsp;</td> 
+    <td>{CONTRAPARTE}&nbsp;</td> 
+    <td>{EMAIL}&nbsp;</td> 
+    <td {bnc} {consulta}><a href="{Link2_Src}"  id="PI_DATOS_CCLink2_{PI_DATOS_CC:rowNumber}">Editar</a></td> 
+  </tr>
+ <!-- END Row -->
+  <!-- BEGIN NoRecords -->
+  <tr>
+    <td colspan="7">No se encontraron registros.</td> 
+  </tr>
+ <!-- END NoRecords -->
+  <tr>
+    <td colspan="7">
+      <!-- BEGIN Navigator Navigator -->
+      <!-- BEGIN Page_Parameter --><input type="hidden" value="{Value}" name="{Name}"><!-- END Page_Parameter -->Per page: 
+      <select onchange="CCChangeSize(this, '{FormName}')" name="{FormName}PageSize">
+        <option selected value="">-</option>
+ {PageSize_Options} 
+      </select>
+ 
+      <!-- BEGIN First_On --><a href="{First_URL}">|&lt;</a> <!-- END First_On -->
+      <!-- BEGIN First_Off -->|&lt; <!-- END First_Off -->
+      <!-- BEGIN Prev_On --><a href="{Prev_URL}">&lt;&lt;</a> <!-- END Prev_On -->
+      <!-- BEGIN Prev_Off -->&lt;&lt; <!-- END Prev_Off -->&nbsp;{Page_Number} {res:CCS_Of}&nbsp;{Total_Pages}&nbsp; 
+      <!-- BEGIN Next_On --><a href="{Next_URL}">&gt;&gt;</a> <!-- END Next_On -->
+      <!-- BEGIN Next_Off -->&gt;&gt; <!-- END Next_Off -->
+      <!-- BEGIN Last_On --><a href="{Last_URL}">&gt;|</a> <!-- END Last_On -->
+      <!-- BEGIN Last_Off -->&gt;| <!-- END Last_Off --><!-- END Navigator Navigator -->&nbsp;</td> 
+  </tr>
+</table>
+<!-- END Grid PI_DATOS_CC --><br>
+</body>
+</html>

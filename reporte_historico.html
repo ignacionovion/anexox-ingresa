@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=windows-1252">
+<title>reportes</title>
+<meta name="GENERATOR" content="CodeCharge Studio 4.3.00.7676">
+
+<script>
+
+</script>
+</head>
+<body>
+<!-- BEGIN Record VST_PI_REPORTESHST -->
+<form id="VST_PI_REPORTESHST" {on_submit} enctype="{HTMLFormEnctype}" method="post" name="{HTMLFormName}" action="{Action}">
+  <h2>Sin Registros en Pago IES</h2>
+ 
+  <table>
+    <!-- BEGIN Error -->
+    <tr>
+      <td colspan="5"><font color="#ff0000">{Error}</font></td> 
+    </tr>
+ <!-- END Error -->
+    <tr>
+      <td>
+        <table>
+          <tr>
+            <td><label for="VST_PI_REPORTESHSTs_RUT">RUT:</label></td> 
+            <td colspan="3"><input id="VST_PI_REPORTESHSTs_RUT" maxlength="12" size="12" value="{s_RUT}" name="{s_RUT_Name}"></td> 
+          </tr>
+ 
+          <tr>
+            <td><label for="VST_PI_REPORTESHSTs_LICITACION">Año Licitación:</label></td> 
+            <td><input id="VST_PI_REPORTESHSTs_LICITACION" maxlength="12" size="12" value="{s_LICITACION}" name="{s_LICITACION_Name}"></td> 
+            <td>Año&nbsp;Operación:&nbsp;</td> 
+            <td><input id="VST_PI_REPORTESHSTs_OPERACION" maxlength="12" size="12" value="{s_OPERACION}" name="{s_OPERACION_Name}">&nbsp;</td> 
+          </tr>
+ 
+          <tr {h_ies}>
+            <td><label for="VST_PI_REPORTESHSTs_IESN_RUT">IES:</label></td> 
+            <td colspan="3">
+              <select id="VST_PI_REPORTESHSTs_IESN_RUT" style="WIDTH: 315px" name="{s_IESN_RUT_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+ {s_IESN_RUT_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+          <tr {h_banco}>
+            <td><label for="VST_PI_REPORTESHSTs_RUTBCO">Banco:</label></td> 
+            <td colspan="3">
+              <select id="VST_PI_REPORTESHSTs_RUTBCO" style="WIDTH: 315px" name="{s_RUTBCO_Name}">
+                <option selected value="">{res:CCS_SelectValue}</option>
+ {s_RUTBCO_Options} 
+              </select>
+ </td> 
+          </tr>
+ 
+        </table>
+ 
+        <p><input id="VST_PI_REPORTESHSTs_TIPO" type="hidden" value="{s_TIPO}" name="{s_TIPO_Name}"></p>
+ </td> 
+    </tr>
+ 
+    <tr>
+      <td colspan="2" align="right">
+        <!-- BEGIN Button Button_DoSearch --><input id="VST_PI_REPORTESHSTButton_DoSearch" alt="{res:CCS_Search}" type="submit" value="Generar Reporte" name="{Button_Name}" target="_blank"><!-- END Button Button_DoSearch --></td> 
+    </tr>
+ 
+  </table>
+</form>
+<!-- END Record VST_PI_REPORTESHST --><br>
+<br>
+<br>
+</body>
+</html>
