@@ -86,12 +86,12 @@ if( $VST_PI_REPORTESSearch->Validate() == 1)
 
 	if(CCGetParam("s_TIPO","")==1)
 	{
-		$resultado = "RUT;RUT BANCO;LICITACI”N;CREDITO UF;MONTO A PAGAR;RUT IES;NOMBRE IES;FECHA PAGO;FECHA CARGA;TIPO PAGO;ESTADO \r\n";		    
+		$resultado = "RUT;RUT BANCO;LICITACI√ì;CREDITO UF;MONTO A PAGAR;RUT IES;NOMBRE IES;FECHA PAGO;FECHA CARGA;TIPO PAGO;ESTADO \r\n";		    
 	   $sql ="SELECT rut||';'||rutbco||';'||licitacion||';'||creditouf||';'||montoapagar||';'||ruties||';'||iest_nombre_ies||';'||TO_CHAR(fecha, 'dd/mm/yyyy')||';'||TO_CHAR(fecha_carga, 'dd/mm/yyyy')||';'||tipo_desc||';'||ESTADO_DESC as dato from vst_pi_reportes WHERE 1=1 ";
 	}
 	else
 	{
-		$resultado = "RUT;RUT BANCO;LICITACI”N;OPERACI”N;ARANCEL SOLICITADO;MONTO CR…DITO;CREDITO UF;MONTO SEGURO IES;MONTO A PAGAR;MONTO OTRA CTA;PLAZO;TASA;FECHA CURSE;RUT IES;NOMBRE IES;FECHA PAGO;FECHA CARGA;TIPO PAGO;ESTADO \r\n";		    
+		$resultado = "RUT;RUT BANCO;LICITACI√ìN;OPERACI√ìN;ARANCEL SOLICITADO;MONTO CR√çDITO;CREDITO UF;MONTO SEGURO IES;MONTO A PAGAR;MONTO OTRA CTA;PLAZO;TASA;FECHA CURSE;RUT IES;NOMBRE IES;FECHA PAGO;FECHA CARGA;TIPO PAGO;ESTADO \r\n";		    
    		 $sql ="SELECT rut||';'||rutbco||';'||licitacion||';'||operacion||';'||arancelsolicitado||';'||montocredito||';'||creditouf||';'||montoseguroies||';'||montoapagar||';'||montootracta||';'||plazo||';'||tasa||';'||TO_CHAR(fechacurse, 'dd/mm/yyyy')||';'||ruties||';'||iest_nombre_ies||';'||TO_CHAR(fecha, 'dd/mm/yyyy')||';'||TO_CHAR(fecha_carga, 'dd/mm/yyyy')||';'||tipo_desc||';'||ESTADO_DESC as dato from vst_pi_reportes WHERE 1=1 ";
 	}
 	if(CCGetParam("s_RUT",""))

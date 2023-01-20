@@ -70,7 +70,7 @@ class clsRecordVST_PI_REPORTESHST { //VST_PI_REPORTESHST Class @3-70AFB68A
             $this->FormSubmitted = ($FormName == $this->ComponentName);
             $Method = $this->FormSubmitted ? ccsPost : ccsGet;
             $this->Button_DoSearch = & new clsButton("Button_DoSearch", $Method, $this);
-            $this->s_LICITACION = & new clsControl(ccsTextBox, "s_LICITACION", "Año Licitación", ccsInteger, "", CCGetRequestParam("s_LICITACION", $Method, NULL), $this);
+            $this->s_LICITACION = & new clsControl(ccsTextBox, "s_LICITACION", "AÃ±o LicitaciÃ³n", ccsInteger, "", CCGetRequestParam("s_LICITACION", $Method, NULL), $this);
             $this->s_IESN_RUT = & new clsControl(ccsListBox, "s_IESN_RUT", "IES", ccsFloat, "", CCGetRequestParam("s_IESN_RUT", $Method, NULL), $this);
             $this->s_IESN_RUT->DSType = dsSQL;
             $this->s_IESN_RUT->DataSource = new clsDBOracle_1();
@@ -88,7 +88,7 @@ class clsRecordVST_PI_REPORTESHST { //VST_PI_REPORTESHST Class @3-70AFB68A
             "FROM VST_SGI_BNC_BANCOS where bancn_cod <> 6";
             $this->s_RUTBCO->DataSource->Order = "";
             $this->s_RUT = & new clsControl(ccsTextBox, "s_RUT", "RUT", ccsInteger, "", CCGetRequestParam("s_RUT", $Method, NULL), $this);
-            $this->s_OPERACION = & new clsControl(ccsTextBox, "s_OPERACION", "Año Operación", ccsInteger, "", CCGetRequestParam("s_OPERACION", $Method, NULL), $this);
+            $this->s_OPERACION = & new clsControl(ccsTextBox, "s_OPERACION", "AÃ±o OperaciÃ³n", ccsInteger, "", CCGetRequestParam("s_OPERACION", $Method, NULL), $this);
             $this->s_TIPO = & new clsControl(ccsHidden, "s_TIPO", "s_TIPO", ccsText, "", CCGetRequestParam("s_TIPO", $Method, NULL), $this);
             if(!$this->FormSubmitted) {
                 if(!is_array($this->s_TIPO->Value) && !strlen($this->s_TIPO->Value) && $this->s_TIPO->Value !== false)

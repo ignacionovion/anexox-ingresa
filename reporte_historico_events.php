@@ -63,7 +63,7 @@ if (CCGetParam("s_TIPO","") && $error== 0){
 	$db->query("ALTER SESSION SET NLS_DATE_FORMAT = 'dd/mm/yyyy'"); //AGREGADO PARA FORMATEAR LAS FECHAS
 	 	
 
-	$resultado = "RUT;RUT BANCO;NOMBRE BANCO;AÑO LICITACIÓN;AÑO OPERACIÓN;ARANCEL SOLICITADO;RUT IES;NOMBRE IES \r\n";		    
+	$resultado = "RUT;RUT BANCO;NOMBRE BANCO;AÃ‘O LICITACIÃ“N;AÃ‘O OPERACIÃ“N;ARANCEL SOLICITADO;RUT IES;NOMBRE IES \r\n";		    
     $sql ="SELECT rut||';'||rut_banco_administrador||';'||nombre_banco||';'||ano_licitacion||';'||ano_operacion||';'||arancel_solicitado||';'||iesn_rut||';'||iest_nombre_ies as dato from vst_pi_reporte_hist WHERE 1=1 ";
 
 

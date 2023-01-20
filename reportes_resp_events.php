@@ -24,7 +24,7 @@ function VST_PI_REPORTESSearch_BeforeShow(& $sender)
 	if(CCGetParam("s_PAGO_TOTAL",""))
 		$pago = CCGetParam("s_PAGO_TOTAL","");
 
-	$resultado = "RUT;RUT BANCO;LICITACI”N;OPERACI”N;;ARANCEL SOLICITADO;MONTO CR…DITO;CREDITO UF;MONTO SEGURO IES;MONTO A PAGAR;MONTO OTRA CTA;PLAZO;TASA;FECHA CURSE;RUT IES;NOMBRE IES;FECHA PAGO; \r\n";		    
+	$resultado = "RUT;RUT BANCO;LICITACI√ìN;OPERACI√ìN;;ARANCEL SOLICITADO;MONTO CR√çDITO;CREDITO UF;MONTO SEGURO IES;MONTO A PAGAR;MONTO OTRA CTA;PLAZO;TASA;FECHA CURSE;RUT IES;NOMBRE IES;FECHA PAGO; \r\n";		    
    $sql ="SELECT rut, rutbco, licitacion, operacion, arancelsolicitado, montocredito, creditouf, montoseguroies, montoapagar, montootracta, plazo, tasa, fechacurse, ruties, iest_nombre_ies, fecha
     from vst_pi_reportes
 	WHERE 1=1 ";
