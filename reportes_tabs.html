@@ -25,6 +25,18 @@ function validateForm() {
     }
 
 }
+function validateFormCIERR() {
+    var rut = document.VST_PI_REPORTESCIERR.VST_PI_REPORTESCIERRs_RUT.value;
+	var licitacion = document.VST_PI_REPORTESCIERR.VST_PI_REPORTESCIERRs_LICITACION.value;
+	var operacion = document.VST_PI_REPORTESCIERR.VST_PI_REPORTESCIERRs_OPERACION.value;
+	var ies = document.VST_PI_REPORTESCIERR.VST_PI_REPORTESCIERRs_IESN_RUT.value;
+	var bco = document.VST_PI_REPORTESCIERR.VST_PI_REPORTESCIERRs_RUTBCO.value;
+    if (rut+licitacion+operacion+ies+bco == "") {
+        alert("Debe seleccionar al menos un filtro.");
+        return false;
+    }
+
+}
 	function carga_ajax(pagina,divs)
 		{
 			    var ajaxRequest;  
@@ -130,7 +142,7 @@ function openCity(evt, repName) {
  
   <li><a href="#" onclick="openCity(event, 'reportesHST');" class="tablinks">Reporte Histórico</a> </li>
     <!-- inovion #11 2023 -->
-  <li><a href="#" onclick="openCity(event, 'reportesCIERR');" class="tablinks">Reporte De Cierre</a> </li>
+  <li><a href="#" onclick="openCity(event, 'reportesCIERR');" class="tablinks">Reporte de Cierre</a> </li>
 
 </ul>
 <div id="reportes" class="tabcontent">

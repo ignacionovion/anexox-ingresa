@@ -2,14 +2,14 @@
 //Include Common Files @1-F42FCE1F
 define("RelativePath", "..");
 define("PathToCurrentPage", "/mod_pagoies/");
-define("FileName", "reporte_historico.php");
+define("FileName", "reporte_cierre.php");
 include_once(RelativePath . "/Common.php");
 include_once(RelativePath . "/Template.php");
 include_once(RelativePath . "/Sorter.php");
 include_once(RelativePath . "/Navigator.php");
 //End Include Common Files
 
-class clsRecordVST_PI_REPORTECIERR { //VST_PI_REPORTE_CIERR Class @3-70AFB68A
+class clsRecordVST_PI_REPORTESCIERR { //VST_PI_REPORTES_CIERR Class @3-70AFB68A
 
 //Variables @3-D6FF3E86
 
@@ -46,7 +46,7 @@ class clsRecordVST_PI_REPORTECIERR { //VST_PI_REPORTE_CIERR Class @3-70AFB68A
 //End Variables
 
 //Class_Initialize Event @3-292AA441
-    function clsRecordVST_PI_REPORTESHST($RelativePath, & $Parent)
+    function clsRecordVST_PI_REPORTESCIERR($RelativePath, & $Parent)
     {
 
         global $FileName;
@@ -56,11 +56,11 @@ class clsRecordVST_PI_REPORTECIERR { //VST_PI_REPORTE_CIERR Class @3-70AFB68A
         $this->Parent = & $Parent;
         $this->RelativePath = $RelativePath;
         $this->Errors = new clsErrors();
-        $this->ErrorBlock = "Record VST_PI_REPORTESHST/Error";
+        $this->ErrorBlock = "Record VST_PI_REPORTESCIERR/Error";
         $this->ReadAllowed = true;
         if($this->Visible)
         {
-            $this->ComponentName = "VST_PI_REPORTESHST";
+            $this->ComponentName = "VST_PI_REPORTESCIERR";
             $this->Attributes = new clsAttributes($this->ComponentName . ":");
             $CCSForm = explode(":", CCGetFromGet("ccsForm", ""), 2);
             if(sizeof($CCSForm) == 1)
@@ -170,10 +170,10 @@ function GetPrimaryKey($keyName)
                 $this->PressedButton = "Button_DoSearch";
             }
         }
-        $Redirect = "reporte_historico.php";
+        $Redirect = "reporte_cierre.php";
         if($this->Validate()) {
             if($this->PressedButton == "Button_DoSearch") {
-                $Redirect = "reporte_historico.php" . "?" . CCMergeQueryStrings(CCGetQueryString("Form", array("Button_DoSearch", "Button_DoSearch_x", "Button_DoSearch_y")));
+                $Redirect = "reporte_cierre.php" . "?" . CCMergeQueryStrings(CCGetQueryString("Form", array("Button_DoSearch", "Button_DoSearch_x", "Button_DoSearch_y")));
                 if(!CCGetEvent($this->Button_DoSearch->CCSEvents, "OnClick", $this->Button_DoSearch)) {
                     $Redirect = "";
                 }
@@ -245,7 +245,7 @@ function GetPrimaryKey($keyName)
     }
 //End Show Method
 
-} //End VST_PI_REPORTESHST Class @3-FCB6E20C
+} //End VST_PI_REPORTESCIERR Class @3-FCB6E20C
 
 
 
@@ -265,7 +265,7 @@ $CCSEventResult = "";
 
 $FileName = FileName;
 $Redirect = "";
-$TemplateFileName = "reporte_historico.html";
+$TemplateFileName = "reporte_cierre.html";
 $BlockToParse = "main";
 $TemplateEncoding = "Windows-1252";
 $ContentType = "text/html";
@@ -278,7 +278,7 @@ CCSecurityRedirect("A;C;D;H;K;S", "");
 //End Authenticate User
 
 //Include events file @1-4A566D15
-include_once("./reporte_historico_events.php");
+include_once("./reporte_cierre_events.php");
 //End Include events file
 
 //Before Initialize @1-E870CEBC
@@ -292,8 +292,8 @@ $Attributes = new clsAttributes("page:");
 $MainPage->Attributes = & $Attributes;
 
 // Controls
-$VST_PI_REPORTESHST = & new clsRecordVST_PI_REPORTESHST("", $MainPage);
-$MainPage->VST_PI_REPORTESHST = & $VST_PI_REPORTESHST;
+$VST_PI_REPORTESCIERR = & new clsRecordVST_PI_REPORTESCIERR("", $MainPage);
+$MainPage->VST_PI_REPORTESCIERR = & $VST_PI_REPORTESCIERR;
 
 BindEvents();
 
@@ -317,7 +317,7 @@ $Attributes->Show();
 //End Initialize HTML Template
 
 //Execute Components @1-7261EFF0
-$VST_PI_REPORTESHST->Operation();
+$VST_PI_REPORTESCIERR->Operation();
 //End Execute Components
 
 //Go to destination page @1-881CBF70
@@ -326,14 +326,14 @@ if($Redirect)
     $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
     $DBOracle_1->close();
     header("Location: " . $Redirect);
-    unset($VST_PI_REPORTESHST);
+    unset($VST_PI_REPORTESCIERR);
     unset($Tpl);
     exit;
 }
 //End Go to destination page
 
 //Show Page @1-97B8F9FE
-$VST_PI_REPORTESHST->Show();
+$VST_PI_REPORTESCIERR->Show();
 $Tpl->block_path = "";
 $Tpl->Parse($BlockToParse, false);
 if (!isset($main_block)) $main_block = $Tpl->GetVar($BlockToParse);
@@ -345,7 +345,7 @@ if ($CCSEventResult) echo $main_block;
 //Unload Page @1-28E97277
 $CCSEventResult = CCGetEvent($CCSEvents, "BeforeUnload", $MainPage);
 $DBOracle_1->close();
-unset($VST_PI_REPORTESHST);
+unset($VST_PI_REPORTESCIERR);
 unset($Tpl);
 //End Unload Page
 

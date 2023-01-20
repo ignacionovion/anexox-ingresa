@@ -10,9 +10,10 @@
 </script>
 </head>
 <body>
-<!-- BEGIN Record VST_PI_REPORTESHST -->
-<form id="VST_PI_REPORTESHST" {on_submit} enctype="{HTMLFormEnctype}" method="post" name="{HTMLFormName}" action="{Action}">
+<!-- BEGIN Record VST_PI_REPORTESCIERR -->
+<form id="VST_PI_REPORTESCIERR" {on_submit} enctype="{HTMLFormEnctype}" method="post" name="{HTMLFormName}" action="{Action}">
   <h2>Sin Registros en Pago IES</h2>
+  <h2>REPORTES DE CIERRE</h2>
  
   <table>
     <!-- BEGIN Error -->
@@ -24,21 +25,21 @@
       <td>
         <table>
           <tr>
-            <td><label for="VST_PI_REPORTESHSTs_RUT">RUT:</label></td> 
-            <td colspan="3"><input id="VST_PI_REPORTESHSTs_RUT" maxlength="12" size="12" value="{s_RUT}" name="{s_RUT_Name}"></td> 
+            <td><label for="VST_PI_REPORTESCIERRs_RUT">RUT:</label></td> 
+            <td colspan="3"><input id="VST_PI_REPORTESCIERRs_RUT" maxlength="12" size="12" value="{s_RUT}" name="{s_RUT_Name}"></td> 
           </tr>
  
           <tr>
-            <td><label for="VST_PI_REPORTESHSTs_LICITACION">Año Licitación:</label></td> 
-            <td><input id="VST_PI_REPORTESHSTs_LICITACION" maxlength="12" size="12" value="{s_LICITACION}" name="{s_LICITACION_Name}"></td> 
+            <td><label for="VST_PI_REPORTESCIERRs_LICITACION">Año Licitación:</label></td> 
+            <td><input id="VST_PI_REPORTESCIERRs_LICITACION" maxlength="12" size="12" value="{s_LICITACION}" name="{s_LICITACION_Name}"></td> 
             <td>Año&nbsp;Operación:&nbsp;</td> 
-            <td><input id="VST_PI_REPORTESHSTs_OPERACION" maxlength="12" size="12" value="{s_OPERACION}" name="{s_OPERACION_Name}">&nbsp;</td> 
+            <td><input id="VST_PI_REPORTESCIERRs_OPERACION" maxlength="12" size="12" value="{s_OPERACION}" name="{s_OPERACION_Name}">&nbsp;</td> 
           </tr>
  
           <tr {h_ies}>
-            <td><label for="VST_PI_REPORTESHSTs_IESN_RUT">IES:</label></td> 
+            <td><label for="VST_PI_REPORTESCIERRs_IESN_RUT">IES:</label></td> 
             <td colspan="3">
-              <select id="VST_PI_REPORTESHSTs_IESN_RUT" style="WIDTH: 315px" name="{s_IESN_RUT_Name}">
+              <select id="VST_PI_REPORTESCIERRs_IESN_RUT" style="WIDTH: 315px" name="{s_IESN_RUT_Name}">
                 <option selected value="">{res:CCS_SelectValue}</option>
  {s_IESN_RUT_Options} 
               </select>
@@ -46,9 +47,9 @@
           </tr>
  
           <tr {h_banco}>
-            <td><label for="VST_PI_REPORTESHSTs_RUTBCO">Banco:</label></td> 
+            <td><label for="VST_PI_REPORTESCIERRs_RUTBCO">Banco:</label></td> 
             <td colspan="3">
-              <select id="VST_PI_REPORTESHSTs_RUTBCO" style="WIDTH: 315px" name="{s_RUTBCO_Name}">
+              <select id="VST_PI_REPORTESCIERRs_RUTBCO" style="WIDTH: 315px" name="{s_RUTBCO_Name}">
                 <option selected value="">{res:CCS_SelectValue}</option>
  {s_RUTBCO_Options} 
               </select>
@@ -57,18 +58,18 @@
  
         </table>
  
-        <p><input id="VST_PI_REPORTESHSTs_TIPO" type="hidden" value="{s_TIPO}" name="{s_TIPO_Name}"></p>
+        <p><input id="VST_PI_REPORTESCIERRs_TIPO" type="hidden" value="{s_TIPO}" name="{s_TIPO_Name}"></p>
  </td> 
     </tr>
  
     <tr>
       <td colspan="2" align="right">
-        <!-- BEGIN Button Button_DoSearch --><input id="VST_PI_REPORTESHSTButton_DoSearch" alt="{res:CCS_Search}" type="submit" value="Generar Reporte" name="{Button_Name}" target="_blank"><!-- END Button Button_DoSearch --></td> 
+        <!-- BEGIN Button Button_DoSearch --><input id="VST_PI_REPORTESCIERRButton_DoSearch" alt="{res:CCS_Search}" type="submit" value="Generar Reporte" name="{Button_Name}" target="_blank"><!-- END Button Button_DoSearch --></td> 
     </tr>
  
   </table>
 </form>
-<!-- END Record VST_PI_REPORTESHST --><br>
+<!-- END Record VST_PI_REPORTESCIERR --><br>
 <br>
 <br>
 </body>

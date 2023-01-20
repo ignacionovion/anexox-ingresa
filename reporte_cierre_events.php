@@ -2,23 +2,23 @@
 //BindEvents Method @1-55AA3EA4
 function BindEvents()
 {
-    global $VST_PI_REPORTESHST;
-    $VST_PI_REPORTESHST->CCSEvents["BeforeShow"] = "VST_PI_REPORTESHST_BeforeShow";
-    $VST_PI_REPORTESHST->CCSEvents["OnValidate"] = "VST_PI_REPORTESHST_OnValidate";
-    $VST_PI_REPORTESHST->ds->CCSEvents["AfterExecuteSelect"] = "VST_PI_REPORTESHST_ds_AfterExecuteSelect";
-    $VST_PI_REPORTESHST->ds->CCSEvents["BeforeExecuteSelect"] = "VST_PI_REPORTESHST_ds_BeforeExecuteSelect";
-    $VST_PI_REPORTESHST->ds->CCSEvents["BeforeBuildSelect"] = "VST_PI_REPORTESHST_ds_BeforeBuildSelect";
+    global $VST_PI_REPORTESCIERR;
+    $VST_PI_REPORTESCIERR->CCSEvents["BeforeShow"] = "VST_PI_REPORTESCIERR_BeforeShow";
+    $VST_PI_REPORTESCIERR->CCSEvents["OnValidate"] = "VST_PI_REPORTESCIERR_OnValidate";
+    $VST_PI_REPORTESCIERR->ds->CCSEvents["AfterExecuteSelect"] = "VST_PI_REPORTESCIERR_ds_AfterExecuteSelect";
+    $VST_PI_REPORTESCIERR->ds->CCSEvents["BeforeExecuteSelect"] = "VST_PI_REPORTESCIERR_ds_BeforeExecuteSelect";
+    $VST_PI_REPORTESCIERR->ds->CCSEvents["BeforeBuildSelect"] = "VST_PI_REPORTESCIERR_ds_BeforeBuildSelect";
 }
 //End BindEvents Method
 
-//VST_PI_REPORTESHST_BeforeShow @3-38B55841
-function VST_PI_REPORTESHST_BeforeShow(& $sender)
+//VST_PI_REPORTESCIERR_BeforeShow @3-38B55841
+function VST_PI_REPORTESCIERR_BeforeShow(& $sender)
 {
-    $VST_PI_REPORTESHST_BeforeShow = true;
+    $VST_PI_REPORTESCIERR_BeforeShow = true;
     $Component = & $sender;
     $Container = & CCGetParentContainer($sender);
-    global $VST_PI_REPORTESHST; //Compatibility
-//End VST_PI_REPORTESHST_BeforeShow
+    global $VST_PI_REPORTESCIERR; //Compatibility
+//End VST_PI_REPORTESCIERR_BeforeShow
 
 //Custom Code @73-2A29BDB7
 // -------------------------
@@ -26,10 +26,10 @@ global $Tpl;
 
 	if(CCGetGroupID() == "A" || CCGetGroupID() == "K")
 	{
-    	$Tpl->setvar("on_submit",' onsubmit="return validateForm()" ');
+    	$Tpl->setvar("on_submit",' onsubmit="return validateFormCIERR" ');
 	}
 
-if( $VST_PI_REPORTESHST->Validate() == 1)
+if( $VST_PI_REPORTESCIERR->Validate() == 1)
 {
 
 	
@@ -102,7 +102,7 @@ if (CCGetParam("s_TIPO","") && $error== 0){
 	}
 
 	
-	$nombre_reporte = "Reporte_historico_".$fecha_actual.".csv";
+	$nombre_reporte = "Reporte_Cierre_".$fecha_actual.".csv";
 	$db->query($sql);
 
 	while ( $db->next_record() )
@@ -124,19 +124,19 @@ if (CCGetParam("s_TIPO","") && $error== 0){
 // -------------------------
 //End Custom Code
 
-//Close VST_PI_REPORTESHST_BeforeShow @3-507B5F58
-    return $VST_PI_REPORTESHST_BeforeShow;
+//Close VST_PI_REPORTESCIERR_BeforeShow @3-507B5F58
+    return $VST_PI_REPORTESCIERR_BeforeShow;
 }
-//End Close VST_PI_REPORTESHST_BeforeShow
+//End Close VST_PI_REPORTESCIERR_BeforeShow
 
-//VST_PI_REPORTESHST_OnValidate @3-9A5EC35F
-function VST_PI_REPORTESHST_OnValidate(& $sender)
+//VST_PI_REPORTESCIERR_OnValidate @3-9A5EC35F
+function VST_PI_REPORTESCIERR_OnValidate(& $sender)
 {
-    $VST_PI_REPORTESHST_OnValidate = true;
+    $VST_PI_REPORTESCIERR_OnValidate = true;
     $Component = & $sender;
     $Container = & CCGetParentContainer($sender);
-    global $VST_PI_REPORTESHST; //Compatibility
-//End VST_PI_REPORTESHST_OnValidate
+    global $VST_PI_REPORTESCIERR; //Compatibility
+//End VST_PI_REPORTESCIERR_OnValidate
 
 //Custom Code @80-2A29BDB7
 // -------------------------
@@ -144,24 +144,24 @@ function VST_PI_REPORTESHST_OnValidate(& $sender)
     if(CCGetGroupID() == "A" || CCGetGroupID() == "K")
 	{
 		if(!CCGetParam("s_RUT","") && !CCGetParam("s_LICITACION","") && !CCGetParam("s_OPERACION","") && !CCGetParam("s_IESN_RUT","") && !CCGetParam("s_RUTBCO",""))
-			$VST_PI_REPORTESHST->Errors->addError("Debe seleccionar al menos un filtro");
+			$VST_PI_REPORTESCIERR->Errors->addError("Debe seleccionar al menos un filtro");
 	}
 // -------------------------
 //End Custom Code
 
-//Close VST_PI_REPORTESHST_OnValidate @3-6F803BD1
-    return $VST_PI_REPORTESHST_OnValidate;
+//Close VST_PI_REPORTESCIERR_OnValidate @3-6F803BD1
+    return $VST_PI_REPORTESCIERR_OnValidate;
 }
-//End Close VST_PI_REPORTESHST_OnValidate
+//End Close VST_PI_REPORTESCIERR_OnValidate
 
-//VST_PI_REPORTESHST_ds_AfterExecuteSelect @3-CA9E0DAD
-function VST_PI_REPORTESHST_ds_AfterExecuteSelect(& $sender)
+//VST_PI_REPORTESCIERR_ds_AfterExecuteSelect @3-CA9E0DAD
+function VST_PI_REPORTESCIERR_ds_AfterExecuteSelect(& $sender)
 {
-    $VST_PI_REPORTESHST_ds_AfterExecuteSelect = true;
+    $VST_PI_REPORTESCIERR_ds_AfterExecuteSelect = true;
     $Component = & $sender;
     $Container = & CCGetParentContainer($sender);
-    global $VST_PI_REPORTESHST; //Compatibility
-//End VST_PI_REPORTESHST_ds_AfterExecuteSelect
+    global $VST_PI_REPORTESCIERR; //Compatibility
+//End VST_PI_REPORTESCIERR_ds_AfterExecuteSelect
 
 //Custom Code @81-2A29BDB7
 // -------------------------
@@ -173,19 +173,19 @@ function VST_PI_REPORTESHST_ds_AfterExecuteSelect(& $sender)
 //DEL  
 //DEL  // -------------------------
 
-//Close VST_PI_REPORTESHST_ds_AfterExecuteSelect @3-AD03457F
-    return $VST_PI_REPORTESHST_ds_AfterExecuteSelect;
+//Close VST_PI_REPORTESCIERR_ds_AfterExecuteSelect @3-AD03457F
+    return $VST_PI_REPORTESCIERR_ds_AfterExecuteSelect;
 }
-//End Close VST_PI_REPORTESHST_ds_AfterExecuteSelect
+//End Close VST_PI_REPORTESCIERR_ds_AfterExecuteSelect
 
-//VST_PI_REPORTESHST_ds_BeforeExecuteSelect @3-ABB76DEE
-function VST_PI_REPORTESHST_ds_BeforeExecuteSelect(& $sender)
+//VST_PI_REPORTESCIERR_ds_BeforeExecuteSelect @3-ABB76DEE
+function VST_PI_REPORTESCIERR_ds_BeforeExecuteSelect(& $sender)
 {
-    $VST_PI_REPORTESHST_ds_BeforeExecuteSelect = true;
+    $VST_PI_REPORTESCIERR_ds_BeforeExecuteSelect = true;
     $Component = & $sender;
     $Container = & CCGetParentContainer($sender);
-    global $VST_PI_REPORTESHST; //Compatibility
-//End VST_PI_REPORTESHST_ds_BeforeExecuteSelect
+    global $VST_PI_REPORTESCIERR; //Compatibility
+//End VST_PI_REPORTESCIERR_ds_BeforeExecuteSelect
 
 //Custom Code @83-2A29BDB7
 // -------------------------
@@ -193,19 +193,19 @@ function VST_PI_REPORTESHST_ds_BeforeExecuteSelect(& $sender)
 // -------------------------
 //End Custom Code
 
-//Close VST_PI_REPORTESHST_ds_BeforeExecuteSelect @3-12ECB3B8
-    return $VST_PI_REPORTESHST_ds_BeforeExecuteSelect;
+//Close VST_PI_REPORTESCIERR_ds_BeforeExecuteSelect @3-12ECB3B8
+    return $VST_PI_REPORTESCIERR_ds_BeforeExecuteSelect;
 }
-//End Close VST_PI_REPORTESHST_ds_BeforeExecuteSelect
+//End Close VST_PI_REPORTESCIERR_ds_BeforeExecuteSelect
 
-//VST_PI_REPORTESHST_ds_BeforeBuildSelect @3-08FD5F79
-function VST_PI_REPORTESHST_ds_BeforeBuildSelect(& $sender)
+//VST_PI_REPORTESCIERR_ds_BeforeBuildSelect @3-08FD5F79
+function VST_PI_REPORTESCIERR_ds_BeforeBuildSelect(& $sender)
 {
-    $VST_PI_REPORTESHST_ds_BeforeBuildSelect = true;
+    $VST_PI_REPORTESCIERR_ds_BeforeBuildSelect = true;
     $Component = & $sender;
     $Container = & CCGetParentContainer($sender);
-    global $VST_PI_REPORTESHST; //Compatibility
-//End VST_PI_REPORTESHST_ds_BeforeBuildSelect
+    global $VST_PI_REPORTESCIERR; //Compatibility
+//End VST_PI_REPORTESCIERR_ds_BeforeBuildSelect
 
 //Custom Code @84-2A29BDB7
 // -------------------------
@@ -213,8 +213,8 @@ function VST_PI_REPORTESHST_ds_BeforeBuildSelect(& $sender)
 // -------------------------
 //End Custom Code
 
-//Close VST_PI_REPORTESHST_ds_BeforeBuildSelect @3-0A75ABFB
-    return $VST_PI_REPORTESHST_ds_BeforeBuildSelect;
+//Close VST_PI_REPORTESCIERR_ds_BeforeBuildSelect @3-0A75ABFB
+    return $VST_PI_REPORTESCIERR_ds_BeforeBuildSelect;
 }
-//End Close VST_PI_REPORTESHST_ds_BeforeBuildSelect
+//End Close VST_PI_REPORTESCIERR_ds_BeforeBuildSelect
 ?>
