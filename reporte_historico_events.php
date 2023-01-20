@@ -10,7 +10,11 @@ function BindEvents()
     $VST_PI_REPORTESHST->ds->CCSEvents["BeforeBuildSelect"] = "VST_PI_REPORTESHST_ds_BeforeBuildSelect";
 }
 //End BindEvents Method
+// inovion agregando variable fecha de descarga de reporte faltante
+$fecha_actual = date('d_m_Y');
 
+// imprimir primero
+print($fecha_actual);
 //VST_PI_REPORTESHST_BeforeShow @3-38B55841
 function VST_PI_REPORTESHST_BeforeShow(& $sender)
 {
@@ -101,6 +105,10 @@ if (CCGetParam("s_TIPO","") && $error== 0){
 			$sql=$sql." AND IESN_RUT = ".CCGetParam("s_IESN_RUT","");
 	}
 
+	$fecha_actual = date('d_m_Y');
+
+	// imprimir primero
+	print($fecha_actual);
 	
 	$nombre_reporte = "Reporte_historico_".$fecha_actual.".csv";
 	$db->query($sql);

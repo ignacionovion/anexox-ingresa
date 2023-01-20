@@ -10,6 +10,11 @@ function BindEvents()
     $VST_PI_REPORTESCIERR->ds->CCSEvents["BeforeBuildSelect"] = "VST_PI_REPORTESCIERR_ds_BeforeBuildSelect";
 }
 //End BindEvents Method
+// inovion agregando variable fecha de descarga de reporte faltante
+$fecha_actual = date('d_m_Y');
+
+// imprimir primero
+print($fecha_actual);
 
 //VST_PI_REPORTESCIERR_BeforeShow @3-38B55841
 function VST_PI_REPORTESCIERR_BeforeShow(& $sender)
@@ -101,6 +106,8 @@ if (CCGetParam("s_TIPO","") && $error== 0){
 			$sql=$sql." AND IESN_RUT = ".CCGetParam("s_IESN_RUT","");
 	}
 
+	// inovion agregando variable fecha de descarga de reporte faltante
+	$fecha_actual = date('d_m_Y');
 	
 	$nombre_reporte = "Reporte_Cierre_".$fecha_actual.".csv";
 	$db->query($sql);
