@@ -92,12 +92,12 @@ if (CCGetParam("s_TIPO","") && $error== 0){
 
     	$ies_rut = CCDLookUp("IESN_RUT","VST_OA_IES","IESN_COD = ".$iesn_cod." AND TIESN_COD =".$tiesn_cod,$db);
 
-		$sql=$sql." AND IESN_RUT = ".$ies_rut;
+		$sql=$sql." AND ruties = ".$ies_rut;
 	}
 	else
 	{
 		if(CCGetParam("s_IESN_RUT",""))
-			$sql=$sql." AND IESN_RUT = ".CCGetParam("s_IESN_RUT","");
+			$sql=$sql." AND ruties = ".CCGetParam("s_IESN_RUT","");
 	}
 
 	// inovion agregando variable fecha de descarga de reporte faltante

@@ -104,7 +104,9 @@ if (CCGetParam("s_TIPO","") && $error== 0){
 		if(CCGetParam("s_IESN_RUT",""))
 			$sql=$sql." AND IESN_RUT = ".CCGetParam("s_IESN_RUT","");
 	}	
-	
+	//inovion #11
+	$fecha_actual = date('d_m_Y');
+
 	$nombre_reporte = "Reporte_historico_".$fecha_actual.".csv";
 	$db->query($sql);
 
