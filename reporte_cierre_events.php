@@ -17,9 +17,8 @@ function VST_PI_REPORTESCIERR_BeforeShow(& $sender)
     $Component = & $sender;
     $Container = & CCGetParentContainer($sender);
     global $VST_PI_REPORTESCIERR; //Compatibility
-	//$fecha_actual = date('d_m_Y');
 //End VST_PI_REPORTESCIERR_BeforeShow
-
+$fecha_actual = date('d_m_Y');
 //Custom Code @73-2A29BDB7
 // -------------------------
 global $Tpl;
@@ -63,8 +62,8 @@ if (CCGetParam("s_TIPO","") && $error== 0){
 	$db->query("ALTER SESSION SET NLS_DATE_FORMAT = 'dd/mm/yyyy'"); //AGREGADO PARA FORMATEAR LAS FECHAS
 	 	
 
-	$resultado = "RUT; AÑO LICITACIÓN; AÑO OPERACIÓN; NOMBRE IES; RUT BANCO; NOMBRE BANCO; ARANCEL SOLICITADO; FECHA CURSE; MONTO PAGADO; NúMERO OPERACIÓN; TASA DE INTERÉS \r\n";		    
-    $sql ="SELECT rut||';'||ano_licitacion||';'||ano_operacion||';'||nombre_ies||';'||rutbco||';'|| arancel_solicitado||';'||fechacurse ||';'|| monto_pagado ||';'|| numero_operacion ||';'|| tasa as dato from vst_pi_reporte_cierre WHERE 1=1 ";
+	$resultado = "RUT; AÑO LICITACIÓN; AÑO OPERACIÓN; NOMBRE IES; RUT BANCO; NOMBRE_BANCO; ARANCEL SOLICITADO; FECHA CURSE; MONTO PAGADO; NúMERO OPERACIÓN; TASA DE INTERÉS \r\n";		    
+    $sql ="SELECT rut||';'||ano_licitacion||';'||ano_operacion||';'||nombre_ies||';'||rutbco||';'||nombre_banco||';'||arancel_solicitado||';'||fechacurse ||';'|| monto_pagado ||';'|| numero_operacion ||';'|| tasa as dato from vst_pi_reporte_cierre WHERE 1=1 ";
 
 
 	if(CCGetParam("s_RUT",""))
@@ -80,22 +79,11 @@ if (CCGetParam("s_TIPO","") && $error== 0){
     	$bancn_cod = CCDLookUp("BANCN_COD","VST_USR_USUARIOS","USUAN_COD = ".CCGetUserID(),$db);
 		$bancn_rut = CCDLookUp("RUT_BANCO","VST_INGRESA_BNC_BANCOS","BANCN_COD = ".$bancn_cod,$db);
 		$sql=$sql."  AND rutbco = ".$bancn_rut;
-
-		// CCBLookUp (campo, tabla, cláusula where, conexión)
 	}
 	else
 	{
 		if(CCGetParam("s_RUTBCO",""))
 			$sql=$sql." AND rutbco = ".CCGetParam("s_RUTBCO","");
-	}
-
-	if(CCGetGroupID() == "H" || CCGetGroupID() == "S")
-	{
-    	
-		$bancn_rut = CCDLookUp("NOMBRE_BANCO","VST_INGRESA_BNC_BANCOS","BANCN_COD = ".$bancn_cod,$db);
-		$sql=$sql."  AND rutbco = ".$bancn_rut;
-
-		// CCBLookUp (campo, tabla, cláusula where, conexión)
 	}
 	if(CCGetGroupID() == "C" || CCGetGroupID() == "D")
 	{
@@ -113,7 +101,7 @@ if (CCGetParam("s_TIPO","") && $error== 0){
 	}
 
 	// inovion agregando variable fecha de descarga de reporte faltante
-	// $fecha_actual = date('d_m_Y');
+	$fecha_actual = date('d_m_Y');
 	
 	$nombre_reporte = "Reporte_Cierre_".$fecha_actual.".csv";
 	$db->query($sql);
